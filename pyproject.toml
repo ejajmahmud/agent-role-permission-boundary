@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-role-permission-boundary"
+version = "0.1.0"
+description = "Role-based access control (RBAC) engine restricting which agents and subagents can invoke specific tools"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-role-permission-boundary = "agent_role_permission_boundary.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_role_permission_boundary*"]
